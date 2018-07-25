@@ -6,12 +6,12 @@ node {
 
 	println "everthing:"+everything
 	println "state:"+state
-	if(state.equals("finished"){
+	if(state.equals("finished")){
 		stage('CI build'){
 			build 'sp-ci'
 		}
 	}
-	if(state.equals("accepted"){
+	if(state.equals("accepted")){
 		stage('Release build'){
 			build 'sp-release'
 		}
