@@ -13,7 +13,7 @@ node {
 	if(pt_current_state.equals("finished")){
 		stage('CI build'){
 			if(pt_story_id!=0) {
-				build 'sp-ci'
+				build job: 'sp-ci', parameters: [string(name: 'story_id', value: pt_story_id)]
 			}
 		}
 	}
