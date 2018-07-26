@@ -17,14 +17,14 @@ node {
 			}
 		}
 	}
-	if(pt_current_.equals("delivered")){
+	if(pt_current_state.equals("delivered")){
 		stage('Release QA build'){
 			if(pt_story_id!=0) {
 				build 'sp-release'
 			}		
 		}
 	}	
-	if(pt_current_.equals("accepted")){
+	if(pt_current_state.equals("accepted")){
 		stage('Release UAT build'){
 			if(pt_story_id!=0) {
 				build 'sp-release'
